@@ -4,11 +4,13 @@
 using namespace sf;
 using namespace std;
 
+
 bool isMouseOver(const RectangleShape& button, const RenderWindow& window) {
     Vector2f mousePos = window.mapPixelToCoords(Mouse::getPosition(window));
     return button.getGlobalBounds().contains(mousePos);
 }
 
+//menu principal
 int main() {
     RenderWindow window(VideoMode(1920, 1080), "Menu Principal Race Crash");
     
@@ -20,13 +22,13 @@ int main() {
 
     Sprite background(backgroundTex);
 
-    RectangleShape botonJugar(Vector2f(340, 120));
-    botonJugar.setPosition(800, 610);
-    botonJugar.setFillColor(Color::Transparent);
+    RectangleShape playButton(Vector2f(340, 120));
+    playButton.setPosition(800, 610);
+    playButton.setFillColor(Color::Transparent);
 
-    RectangleShape botonSalir(Vector2f(340, 120));
-    botonSalir.setPosition(800, 790);
-    botonSalir.setFillColor(Color::Transparent);
+    RectangleShape exitButton(Vector2f(340, 120));
+    exitButton.setPosition(800, 790);
+    exitButton.setFillColor(Color::Transparent);
 
 
     while (window.isOpen()) {
@@ -37,11 +39,11 @@ int main() {
 
             if (event.type == Event::MouseButtonPressed && event.mouseButton.button==Mouse::Left) {
                 
-              if (isMouseOver(botonJugar, window)) {
-                        Juego juego;
-                        juego.run();
+              if (isMouseOver(playButton, window)) {
+                        Juego game;
+                        game.run();
               }
-              if (isMouseOver(botonSalir, window)) {
+              if (isMouseOver(exitButton, window)) {
                         window.close();
               }
                 
@@ -50,9 +52,9 @@ int main() {
 
         window.clear();
         window.draw(background);   
-        window.draw(botonJugar);
+        window.draw(playButton);
     
-        window.draw(botonSalir);
+        window.draw(exitButton);
         window.display();
     }
 
