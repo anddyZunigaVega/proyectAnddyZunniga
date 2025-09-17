@@ -140,7 +140,6 @@ sfml-window-d.lib</AdditionalDependencies>
   <ItemGroup>
     <ClCompile Include="Gema.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="hi.cpp" />
     <ClCompile Include="Juego.cpp" />
     <ClCompile Include="Tablero.cpp" />
   </ItemGroup>

@@ -12,7 +12,7 @@ Gema::Gema(int newType, Texture& tex, int row, int col) {
     targetPos = sprite.getPosition();
 }
 
-void Gema::setTipo(int newType, Texture& tex) {
+void Gema::setType(int newType, Texture& tex) {
     type = newType;
     sprite.setTexture(tex);
     sprite.setTextureRect(IntRect(type * 130, 0, 130, 130));

@@ -49,7 +49,6 @@ int main() {
                 
             }
         }
-
         window.clear();
         window.draw(background);   
         window.draw(playButton);
@@ -57,6 +56,5 @@ int main() {
         window.draw(exitButton);
         window.display();
     }
-
     return 0;
 }

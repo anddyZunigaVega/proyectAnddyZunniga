@@ -130,7 +130,7 @@ void Tablero::deleteMatch() {
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < N; j++) {
             if (markBoard[i][j]) {
-                grid[i][j]->setTipo(-1, gemTex);
+                grid[i][j]->setType(-1, gemTex);
                 score += 10;
             }
         }
@@ -179,7 +179,7 @@ void Tablero::applyGravityAndGenerate() {
             }
         }
         for (int i = writeRow; i >= 0; --i) {
-            grid[i][j]->setTipo(rand() % 5, gemTex);
+            grid[i][j]->setType(rand() % 5, gemTex);
             grid[i][j]->sprite.setPosition(j * 130, -130 * (writeRow - i + 1));
             grid[i][j]->targetPos = Vector2f(j * 130, i * 130);
         }

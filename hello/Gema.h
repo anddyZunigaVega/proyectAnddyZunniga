@@ -10,7 +10,7 @@ public:
 
     Gema();
     Gema(int newType, Texture& tex, int row, int col);
-    void setTipo(int newType, Texture& tex);
+    void setType(int newType, Texture& tex);
     void setPos(int row, int col);
     ~Gema();
 };

@@ -18,9 +18,6 @@
     <ClCompile Include="main.cpp">
       <Filter>Archivos de encabezado\Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="hi.cpp">
-      <Filter>Archivos de encabezado\Archivos de origen</Filter>
-    </ClCompile>
     <ClCompile Include="Juego.cpp">
       <Filter>Archivos de encabezado\Archivos de origen</Filter>
     </ClCompile>
