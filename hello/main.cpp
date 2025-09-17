@@ -16,7 +16,7 @@ int main() {
     
     Texture backgroundTex;
     if (!backgroundTex.loadFromFile("imagenes/motos_fondo_512.png")){
-        cout << "Error imagen menu principal." << std::endl;
+        cout << "Error imagen menu principal." << endl;
         return -1;
     }
 
