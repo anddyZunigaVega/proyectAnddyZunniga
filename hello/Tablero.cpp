@@ -10,9 +10,11 @@ Tablero::Tablero() {
     moves = 20;
     state = IDLE;
 
-    for (int i = 0; i < N; i++)
-        for (int j = 0; j < N; j++)
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++) {
             grid[i][j] = NULL;
+        }
+    }
 
     if (!gemTex.loadFromFile("imagenes/gemmas.png")) {
         cout << "Error cargar imagen gemmas" << std::endl;

@@ -13,10 +13,10 @@ class Tablero {
     int score;
     static const int N = 8;
     Gema* grid[N][N];
+    Texture gemTex;
     const float SWAP_SPEED = 600.f;
     const float FALL_SPEED = 900.f;
     const Time MATCH_PAUSE = milliseconds(300);
-    Texture gemTex;
 
     enum GameState { IDLE, SWAPPING, REVERSING, MATCHING_PAUSE, FALLING };
     GameState state;
@@ -30,12 +30,12 @@ class Tablero {
     int getMoves();
     int getScore();
     void draw(RenderWindow& window);
-    bool tryMove(int row1, int col1, int row2, int col2);
+    bool createInitialBoard(int i, int j, int gemType);
     void restart();
-    void update(float time); 
+    bool tryMove(int row1, int col1, int row2, int col2);
     bool anyMatch();
     void deleteMatch();
-    bool createInitialBoard(int i, int j, int gemType);
+    void update(float time); 
     bool updateAnimation(float time, float speed);
     void applyGravityAndGenerate();
 };
