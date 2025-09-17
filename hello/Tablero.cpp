@@ -24,9 +24,11 @@ Tablero::Tablero() {
 }
 
 Tablero::~Tablero() {
-    for (int i = 0; i < N; i++)
-        for (int j = 0; j < N; j++)
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++) {
             delete grid[i][j];
+        }
+    }
 }
 
 int Tablero::getMoves() {
@@ -42,9 +44,11 @@ void Tablero::restart() {
         for (int j = 0; j < N; j++) {
             delete grid[i][j];
             int tipo;
+
             do {
                 tipo = rand() % 5;
             } while (createInitialBoard(i, j, tipo));
+
             grid[i][j] = new Gema(tipo, gemTex, i, j);
         }
     }
@@ -74,20 +78,21 @@ void Tablero::draw(RenderWindow& window) {
 
 bool Tablero::anyMatch() {
     // Horizontal
-    for (int i = 0; i < N; i++)
+    for (int i = 0; i < N; i++) {
         for (int j = 0; j < N - 2; j++) {
-            int t = grid[i][j]->type;
-            if (t == -1) continue;
-            if (grid[i][j + 1]->type == t && grid[i][j + 2]->type == t)
+            int type = grid[i][j]->type;
+            if (type == -1) continue;
+            if (grid[i][j + 1]->type == type && grid[i][j + 2]->type == type)
                 return true;
         }
+    }
 
     // Vertical
     for (int j = 0; j < N; j++) {
         for (int i = 0; i < N - 2; i++) {
-            int t = grid[i][j]->type;
-            if (t == -1) continue;
-            if (grid[i + 1][j]->type == t && grid[i + 2][j]->type == t)
+            int type = grid[i][j]->type;
+            if (type == -1) continue;
+            if (grid[i + 1][j]->type == type && grid[i + 2][j]->type == type)
                 return true;
         }
     }
