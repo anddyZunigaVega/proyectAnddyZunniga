@@ -10,7 +10,7 @@ bool isMouseOver(const RectangleShape& button, const RenderWindow& window) {
     return button.getGlobalBounds().contains(mousePos);
 }
 
-//menu principal
+
 int main() {
     RenderWindow window(VideoMode(1920, 1080), "Menu Principal Race Crash");
     
