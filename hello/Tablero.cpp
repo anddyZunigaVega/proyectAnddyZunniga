@@ -22,7 +22,7 @@ Tablero::Tablero() {
         win = false;
         state = IDLE;
 
-        level = 3;
+        level = 1;
         iceRemaining = 0;
         bombsActivated = 0;
 
