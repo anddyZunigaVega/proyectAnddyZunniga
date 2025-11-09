@@ -85,7 +85,7 @@ void Tablero::setLevel(int newLevel) {
     level = newLevel;
 
     if (level == 1) {
-        targetScore = 200;
+        targetScore = 1000;
         targetMoves = 22;
         targetIce = 0;
         targetBombsToActivate = 0;
@@ -98,10 +98,10 @@ void Tablero::setLevel(int newLevel) {
     }
     else if (level == 3) {
         addToRanking();
-        targetScore = 500;
+        targetScore = 1500;
         targetMoves = 30;
         targetIce = 0;
-        targetBombsToActivate = 1;
+        targetBombsToActivate = 5;
     }
 
     iceRemaining = 0;
