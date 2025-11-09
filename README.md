@@ -27,6 +27,7 @@ El objetivo es alcanzar el puntaje meta antes de quedarse sin movimientos. Al fi
 
 ![Menú principal](imagenes/menu.png)
 ![Nivel 1 en acción](imagenes/nivel1.png)
+**Descubre el nivel 2 y 3 instalandolo**
 
 
 ## Diagrama de Clases
