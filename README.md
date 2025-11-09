@@ -3,9 +3,9 @@ I entrega
 
 ## **RaceCrash**
 
-**RaceCrash** es un juego 2D desarrollado en **C++** con la librería **SFML**, donde el jugador debe combinar gemas para obtener puntos, romper hielo y activar bombas en diferentes niveles.
+**RaceCrash** es un juego 2D desarrollado en **C++** con la librería **SFML**, donde el jugador debe combinar las motocicletas por estilo en match de 3 o mas para obtener puntos, romper hielo y activar bombas en diferentes niveles. El diseño de las motocicletas puede confundirte, así que hay que prestar mucha atención para hacer los match que te den un mayor puntaje.
 
-El objetivo es alcanzar el puntaje meta antes de quedarse sin movimientos. Al finalizar el último nivel, el juego guarda el puntaje total y los movimientos en un archivo de ranking.
+El objetivo es alcanzar el puntaje meta antes de quedarse sin movimientos. Al finalizar el último nivel, el juego guarda el puntaje total y los movimientos en un archivo de ranking, puedes intentar superar tu record anterior, el ranking del menu principal mostrara las 10 partidas que se completaron hasta el nivel 3, se mostrara el mayor puntaje con menor cantidad de movimientos.
 
 ## **Tecnologías utilizadas**
 
