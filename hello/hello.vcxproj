@@ -152,6 +152,8 @@ sfml-window-d.lib</AdditionalDependencies>
     <ClInclude Include="GemaHielo.h" />
     <ClInclude Include="GemaNormal.h" />
     <ClInclude Include="Juego.h" />
+    <ClInclude Include="Lista.h" />
+    <ClInclude Include="Ranking.h" />
     <ClInclude Include="Tablero.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

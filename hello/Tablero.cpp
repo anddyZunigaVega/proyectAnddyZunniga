@@ -490,9 +490,9 @@ void Tablero::update(float time) {
         //ranking
         allMoves += getMoves();
         allScore += getScore();
-
         win = true;
     }
+
 }
 
 bool Tablero::objectivesMet() {
@@ -507,6 +507,11 @@ bool Tablero::objectivesMet() {
         return score >= targetScore && iceRemaining <= 0 && bombsActivated >= targetBombsToActivate;
     }
     return false;
+}
+
+void Tablero::setName(string nName)
+{
+	name = nName;
 }
 
 //Ranking 

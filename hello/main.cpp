@@ -1,6 +1,9 @@
 #include <iostream>
 #include "Juego.h"
 #include <SFML/Graphics.hpp>
+#include <string>
+#include "Ranking.h"
+
 using namespace sf;
 using namespace std;
 

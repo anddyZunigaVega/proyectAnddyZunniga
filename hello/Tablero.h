@@ -4,7 +4,8 @@
 #include "GemaNormal.h"
 #include "GemaHielo.h"
 #include "GemaBomba.h"
-
+#include "Lista.h"
+#include <fstream>
 using namespace sf;
 using namespace std;
 
@@ -14,6 +15,7 @@ private:
     int score;
 
     //ranking
+    string name;           
     int allMoves;
     int allScore;
 
@@ -51,7 +53,6 @@ private:
 public:
     Tablero();
     ~Tablero();
-
     int getMoves();
     int getScore();
 
@@ -74,6 +75,8 @@ public:
     bool objectivesMet();
 
     //ranking
+	void setName(string nName);
     int getAllScore();
     int getAllMoves();
+    
 };
