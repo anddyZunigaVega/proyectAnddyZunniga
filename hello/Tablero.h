@@ -12,6 +12,15 @@ class Tablero {
 private:
     int moves;
     int score;
+
+    //ranking
+    int allMoves;
+    int allScore;
+
+    //float bestScoreWhitLessMoves;
+    
+    //normal
+
     bool win;
     static const int N = 8;
     Gema* grid[N][N];
@@ -42,8 +51,10 @@ private:
 public:
     Tablero();
     ~Tablero();
+
     int getMoves();
     int getScore();
+
     bool getStateIDLE();
     void draw(RenderWindow& window);
     bool createInitialBoard(int i, int j, int gemType);
@@ -61,4 +72,8 @@ public:
     int getIceRemaining();
     int getBombsActivated();
     bool objectivesMet();
+
+    //ranking
+    int getAllScore();
+    int getAllMoves();
 };

@@ -22,7 +22,7 @@ Tablero::Tablero() {
         win = false;
         state = IDLE;
 
-        level = 1;
+        level = 3;
         iceRemaining = 0;
         bombsActivated = 0;
 
@@ -81,17 +81,26 @@ void Tablero::setLevel(int newLevel) {
     level = newLevel;
 
     if (level == 1) {
-        targetScore = 1250;
+        targetScore = 200;
         targetMoves = 22;
         targetIce = 0;
         targetBombsToActivate = 0;
     }
     else if (level == 2) {
+        //Ranking
+        allMoves+=getMoves();
+        allScore+=getScore();
+
+
         targetScore = 1500;
         targetMoves = 25;
         targetBombsToActivate = 0;
     }
     else if (level == 3) {
+        //Ranking
+        allMoves += getMoves();
+        allScore += getScore();
+
         targetScore = 2200;
         targetMoves = 30;
         targetIce = 0;
@@ -477,6 +486,11 @@ void Tablero::update(float time) {
 
     if (state == IDLE && level == 3 &&
         score >= targetScore && iceRemaining <= 0 && bombsActivated >= targetBombsToActivate) {
+
+        //ranking
+        allMoves += getMoves();
+        allScore += getScore();
+
         win = true;
     }
 }
@@ -493,4 +507,15 @@ bool Tablero::objectivesMet() {
         return score >= targetScore && iceRemaining <= 0 && bombsActivated >= targetBombsToActivate;
     }
     return false;
+}
+
+//Ranking 
+int Tablero::getAllScore()
+{
+    return allScore;
+}
+
+int Tablero::getAllMoves()
+{
+    return allMoves;
 }
