@@ -26,6 +26,10 @@ Tablero::Tablero() {
         iceRemaining = 0;
         bombsActivated = 0;
 
+        name = "";
+        allMoves = 0;
+        allScore = 0;
+
         for (int i = 0; i < N; i++)
             for (int j = 0; j < N; j++)
                 grid[i][j] = NULL;
@@ -87,24 +91,17 @@ void Tablero::setLevel(int newLevel) {
         targetBombsToActivate = 0;
     }
     else if (level == 2) {
-        //Ranking
-        allMoves+=getMoves();
-        allScore+=getScore();
-
-
+        addToRanking();
         targetScore = 1500;
         targetMoves = 25;
         targetBombsToActivate = 0;
     }
     else if (level == 3) {
-        //Ranking
-        allMoves += getMoves();
-        allScore += getScore();
-
-        targetScore = 2200;
+        addToRanking();
+        targetScore = 500;
         targetMoves = 30;
         targetIce = 0;
-        targetBombsToActivate = 5;
+        targetBombsToActivate = 1;
     }
 
     iceRemaining = 0;
@@ -487,12 +484,35 @@ void Tablero::update(float time) {
     if (state == IDLE && level == 3 &&
         score >= targetScore && iceRemaining <= 0 && bombsActivated >= targetBombsToActivate) {
 
-        //ranking
-        allMoves += getMoves();
-        allScore += getScore();
         win = true;
-    }
 
+        // movidas y score del run actual
+        int usedMovesThisLevel = targetMoves - moves; 
+        int scoreThisLevel = score;
+
+        // Totales
+        int totalMoves = allMoves + usedMovesThisLevel;
+        int totalScore = allScore + scoreThisLevel;
+
+        // Leer nombre archivo temporal
+        string nombreJugador = "Jugador";
+        ifstream temp("nombre_actual.txt");
+        if (temp.is_open()) {
+            getline(temp, nombreJugador);
+            temp.close();
+        }
+
+        // Guardar en ranking.txt
+        ofstream archivo("ranking.txt", ios::app);
+        if (archivo.is_open()) {
+            archivo << nombreJugador << " " << totalScore << " " << totalMoves << "\n";
+            archivo.close();
+            cout << "Guardado: " << nombreJugador << " " << totalScore << " " << totalMoves << std::endl;
+        }
+        else {
+            cout << "Error: no se pudo abrir ranking.txt para escritura.\n";
+        }
+    }
 }
 
 bool Tablero::objectivesMet() {
@@ -523,4 +543,14 @@ int Tablero::getAllScore()
 int Tablero::getAllMoves()
 {
     return allMoves;
+}
+
+void Tablero::addToRanking() {
+    int usedMovesThisLevel = targetMoves - moves;
+    if (usedMovesThisLevel < 0) usedMovesThisLevel = 0; // seguridad
+
+    allMoves += usedMovesThisLevel;
+    allScore += score;
+
+    std::cout << "Acumulado ranking -> Score: " << allScore << " | Moves: " << allMoves << std::endl;
 }

@@ -16,7 +16,7 @@ class Ranking{
 
  public:
 	Ranking() {}
-	Ranking(string nName,int nScore,int nMoves):name(nName),score(nScore),moves(nMoves),scoreForMoves(score/moves){}
+	Ranking(string nName,int nScore,int nMoves):name(nName),score(nScore),moves(nMoves),scoreForMoves((float)nScore/(float)nMoves){}
 	float getScoreForMoves() { return scoreForMoves; }
 	int getScore() { return score; }
 	int getMoves() { return moves; }

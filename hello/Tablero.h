@@ -6,6 +6,8 @@
 #include "GemaBomba.h"
 #include "Lista.h"
 #include <fstream>
+#include <string>
+
 using namespace sf;
 using namespace std;
 
@@ -18,10 +20,6 @@ private:
     string name;           
     int allMoves;
     int allScore;
-
-    //float bestScoreWhitLessMoves;
-    
-    //normal
 
     bool win;
     static const int N = 8;
@@ -78,5 +76,5 @@ public:
 	void setName(string nName);
     int getAllScore();
     int getAllMoves();
-    
+    void addToRanking();
 };
