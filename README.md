@@ -16,6 +16,14 @@ El objetivo es alcanzar el puntaje meta antes de quedarse sin movimientos. Al fi
 
 ⚙️ **Instalación y ejecución**
 1.Descarga la versión compilada desde la carpeta `Release/` o el archivo `.zip` disponible.
+
 2.Asegúrate de tener instalado el [Microsoft Visual C++ Redistributable](https://aka.ms/vs/17/release/vc_redist.x64.exe).
+
 3.Extrae la carpeta **RaceCrash**.
+
 4. Ejecuta **hello.exe** para jugar 🎮.
+
+🖼️ **Capturas de pantalla**
+
+![Menú principal](imagenes/menu.png)
+![Nivel 1 en acción](imagenes/nivel1.png)
