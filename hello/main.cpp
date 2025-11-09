@@ -19,7 +19,7 @@ bool isMouseOver(const RectangleShape& button, const RenderWindow& window) {
 string pedirNombre() {
     RenderWindow nameWindow(VideoMode(600, 300), "Ingresa tu nombre");
     Font font;
-    if (!font.loadFromFile("letras/arial.ttf")) {
+    if (!font.loadFromFile("assets/letras/arial.ttf")) {
         cout << "Error cargando fuente arial.ttf" << endl;
         return "";
     }
@@ -73,7 +73,7 @@ int main() {
     RenderWindow window(VideoMode(1920, 1080), "Menu Principal Race Crash");
 
     Texture backgroundTex;
-    if (!backgroundTex.loadFromFile("imagenes/motos_fondo_512.png")) {
+    if (!backgroundTex.loadFromFile("assets/imagenes/motos_fondo_512.png")) {
         cout << "Error imagen menu principal." << endl;
         return -1;
     }
@@ -105,7 +105,7 @@ int main() {
     }
 
     Font font;
-    if (!font.loadFromFile("letras/arial.ttf")) {
+    if (!font.loadFromFile("assets/letras/arial.ttf")) {
         cout << "Error cargando fuente arial.ttf\n";
     }
 

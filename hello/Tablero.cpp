@@ -4,16 +4,16 @@
 
 Tablero::Tablero() {
     try {
-        if (!gemTex.loadFromFile("imagenes/gemmas.png")) {
+        if (!gemTex.loadFromFile("assets/imagenes/gemmas.png")) {
             throw runtime_error("Error al cargar imagen gemmas.png");
         }
-        if (!iceTex.loadFromFile("imagenes/ice_gem.png")) {
+        if (!iceTex.loadFromFile("assets/imagenes/ice_gem.png")) {
             throw runtime_error("Error al cargar ice_gem.png");
         }
-        if (!bombTex.loadFromFile("imagenes/bomb_gem.png")) {
+        if (!bombTex.loadFromFile("assets/imagenes/bomb_gem.png")) {
             throw runtime_error("Error al cargar bomb_gem.png");
         }
-        if (!iceDamageTex.loadFromFile("imagenes/iceDamage_gem.png")) {
+        if (!iceDamageTex.loadFromFile("assets/imagenes/iceDamage_gem.png")) {
             throw runtime_error("Error al cargar iceDamage_gem.png");
         }
         srand(time(NULL));
@@ -22,7 +22,7 @@ Tablero::Tablero() {
         win = false;
         state = IDLE;
 
-        level = 3;
+        level = 1;
         iceRemaining = 0;
         bombsActivated = 0;
 

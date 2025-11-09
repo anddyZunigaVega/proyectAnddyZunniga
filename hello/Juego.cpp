@@ -4,26 +4,26 @@ using namespace std;
 
 Juego::Juego() : window(VideoMode(1920, 1080), "Rally Crash"), selected(false) {
     try {
-        if (!font.loadFromFile("letras/arial.ttf")) {
+        if (!font.loadFromFile("assets/letras/arial.ttf")) {
             throw runtime_error("Error cargando letra arial.ttf");
         }
 
-        if (!backGroundTex1.loadFromFile("imagenes/fondo.png")) {
+        if (!backGroundTex1.loadFromFile("assets/imagenes/fondo.png")) {
             throw runtime_error("Error al cargar imagen de fondo normal.");
         }
-        if (!backGroundTex2.loadFromFile("imagenes/fondoPerdida.png")) {
+        if (!backGroundTex2.loadFromFile("assets/imagenes/fondoPerdida.png")) {
             throw runtime_error("Error al cargar imagen de fondo final.");
         }
-        if (!backGroundTexLevel2.loadFromFile("imagenes/fondo2.png")) {
+        if (!backGroundTexLevel2.loadFromFile("assets/imagenes/fondo2.png")) {
             throw runtime_error("No se encontro fondoNivel2.png");
         }
-        if (!backGroundTexLevel3.loadFromFile("imagenes/fondo3.png")) {
+        if (!backGroundTexLevel3.loadFromFile("assets/imagenes/fondo3.png")) {
             throw runtime_error("No se encontro fondoNivel3.png");
         }
-        if (!backGroundTexFinal.loadFromFile("imagenes/fondoFinall.png")) {
+        if (!backGroundTexFinal.loadFromFile("assets/imagenes/fondoFinall.png")) {
             throw runtime_error("No se encontro fondoFinall.png");
         }
-        if (!backGroundTexWait.loadFromFile("imagenes/fondoEspera.png")) {
+        if (!backGroundTexWait.loadFromFile("assets/imagenes/fondoEspera.png")) {
             throw runtime_error("No se encontro fondoEspera.png");
         }
 
