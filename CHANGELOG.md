@@ -6,7 +6,7 @@
 - Sistema de **ranking** funcional que guarda nombre, score y movimientos.
 - Corrección en acumulación de puntaje y movimientos.
 - Creación del ejecutable final (`hello.exe`) con carpeta `assets/`.
-- - Se añadió **pantalla de nombre** y almacenamiento en `ranking.txt`.
+- Se añadió **pantalla de nombre** y almacenamiento en `ranking.txt`.
 - Nueva clase **Ranking** y **Lista** para ordenar los puntajes.
 - Implementación de `addToRanking()` para acumular puntaje total.
 
