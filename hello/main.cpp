@@ -112,9 +112,9 @@ int main() {
     Text rankingText;
     rankingText.setFont(font);
     rankingText.setCharacterSize(28);
-    rankingText.setFillColor(Color::Green);
-    rankingText.setPosition(20, 500);
-    rankingText.setString("TOP 10 SCORE por Movimientos:\n\n" + lista.getPrimerosDiez());
+    rankingText.setFillColor(Color::White);
+    rankingText.setPosition(20, 495);
+    rankingText.setString("                     TOP 10 \n Mayor puntaje por menos Movimientos:\n\n" + lista.getPrimerosDiez());
 
     string nombreJugador = ""; // nombre temporal
 
